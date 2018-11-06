@@ -18,14 +18,11 @@ products(prefix) = [
     LibraryProduct(prefix, "libexslt", :libexslt)
 ]
 
-platforms = [
-    Linux(:x86_64, libc=:glibc)
-]
-#platforms = supported_platforms()
+platforms = supported_platforms()
 
 dependencies = [
-    "https://github.com/bicycle1885/ZlibBuilder/releases/download/v1.0.1/build_Zlib.v1.2.11.jl",
-    "https://github.com/bicycle1885/XML2Builder/releases/download/v1.0.1/build_XML2Builder.v2.9.7.jl",
+    "https://github.com/bicycle1885/ZlibBuilder/releases/download/v1.0.2/build_Zlib.v1.2.11.jl",
+    "https://github.com/benlorenz/XML2Builder/releases/download/v1.0.1-1/build_XML2Builder.v2.9.7.jl",
 ]
 
 build_tarballs(ARGS, "XSLTBuilder", version, sources, script, platforms, products, dependencies)
